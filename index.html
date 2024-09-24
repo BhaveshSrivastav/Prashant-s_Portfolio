@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" style="width: 100%; height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prashant's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4c09279b0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <span><h1 style="font-size: 40px; font-family: cursive;">Portfolio</h1></span>
+            <ul id="sidemenu">
+                <li><a href="#header-test">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()" ></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-test">
+            <p>Head Recruiter</p>
+            <h1 >Hi...<br>I'm <span style="font-family: Lucida Handwriting;">Prashant Raj Srivastava</span></br>From India</h1>
+        </div>
+    </div>
+</div>
+
+<!-------------about--------------->
+
+<div id="about">
+    <div class="contaner">
+        <div class="row">
+            <div class="about-col-1">
+                
+                <img src="WhatsApp Image 2024-09-23 at 19.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                    <p >I am a HR professional, committed to stay update with current industry trends and emerging practices. A
+                        continuous learner who embraces innovative HR tools and technologies to streamline processes and enhance
+                        efficiency. Seeking a career in a dynamic organization where I can showcase my skills, tackle challenges,
+                        achieve organizational goals, and boost my career through ongoing learning and dedication.</p><br> 
+                                 
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Proficient in Microsoft Word</span>
+                        <li><span>Microsoft Excel,</span>
+                        <li><span>Microsoft Access</span>
+                        <li><span>Microsoft PowerPoint</span>    
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Organization:</span>IIFL Samasta Finance Limited.</br>
+                            <span>Department:</span> Human Resource</br>
+                            <span>Designation:</span> Divisional HR</br>
+                            <span>Grade:</span> Executive</br>
+                            <span>Duration:</span> May 2023 to till date</br>
+                            <span>Location:</span> Varanasi, UP</br>
+                            
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Master of Business Administration (MBA) in HR & Finance
+                        </span><br>Himalayan Garhwal University, Uttarakhand | 2021</li>
+                        <li><span>Bachelor of Commerce (B. Com.)
+                        </span><br>Shree Ram PG College, Varanasi, Uttar Pradesh | 2019</li>
+                        <li><span> Intermediate
+                        </span><br>CBSE Board | 2016</li>
+                        <li><span> High School
+                        </span><br>CBSE Board | 2014
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div> 
+
+<!--ending about-->
+
+<!--starting contact-->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>prashantrajsrivastava3@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+918707247882</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/prashant-raj-srivastava-031515186/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="./Prashant's_resume.pdf" download class="btn btn-2">Download CV</a>
+            </div>
+           
+        </div>
+        
+    </div>
+</div>
+<div class="copyright">
+    <p>Developed by : Bhavesh Srivastava</p>
+</div>
+
+<!--ending contact-->
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+<script>
+     
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+
+
+</body>
+</html>
+
